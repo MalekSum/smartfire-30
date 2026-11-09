@@ -1,0 +1,23 @@
+{
+  "edge": {
+    "mv": 0,
+    "file": "model_edge_v0.joblib",
+    "metrics": {
+      "note": "stub"
+    }
+  },
+  "fog": {
+    "mv": 0,
+    "file": "model_fog_v0.joblib",
+    "metrics": {
+      "note": "stub"
+    }
+  },
+  "cloud": {
+    "mv": 0,
+    "file": "model_cloud_v0.joblib",
+    "metrics": {
+      "note": "stub"
+    }
+  }
+}
