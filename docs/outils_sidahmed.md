@@ -12,5 +12,5 @@
 - MQTT Explorer : à compléter
 
 ## Comptes
-- GitHub : SidAhmedfr (à confirmer)
+- GitHub : SidAhmedfr
 - draw.io (diagrams.net) : aucun compte requis
