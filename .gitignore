@@ -1,0 +1,10 @@
+.env
+*.pem
+*.key
+*.zip
+__pycache__/
+.venv/
+node_modules/
+cloud_data/
+mosquitto_data/
+fog/mosquitto/config/passwd
