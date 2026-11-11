@@ -1,23 +1,37 @@
 {
   "edge": {
-    "mv": 0,
-    "file": "model_edge_v0.joblib",
+    "mv": 1,
+    "file": "model_edge_v1.joblib",
     "metrics": {
-      "note": "stub"
+      "seed": 42,
+      "split": "test",
+      "variant": "8 trees, depth 6",
+      "model_h": "edge/model.h",
+      "f1_incendie": 0.9797,
+      "taux_fausses_alarmes": 0.008,
+      "taille_ko": 50.8
     }
   },
   "fog": {
-    "mv": 0,
-    "file": "model_fog_v0.joblib",
+    "mv": 1,
+    "file": "model_fog_v1.joblib",
     "metrics": {
-      "note": "stub"
+      "seed": 42,
+      "split": "test",
+      "f1_incendie": 0.9861,
+      "taux_fausses_alarmes": 0.0031,
+      "taille_ko": 5906.0
     }
   },
   "cloud": {
-    "mv": 0,
-    "file": "model_cloud_v0.joblib",
+    "mv": 1,
+    "file": "model_cloud_v1.joblib",
     "metrics": {
-      "note": "stub"
+      "seed": 42,
+      "split": "test",
+      "f1_incendie": 0.9447,
+      "taux_fausses_alarmes": 0.0026,
+      "taille_ko": 3175.1
     }
   }
 }
