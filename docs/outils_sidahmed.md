@@ -8,8 +8,8 @@
 - curl : 8.18.0
 - mosquitto-clients : 2.0.22
 - Python local : 3.14.4 (le code du projet tourne en Python 3.11 dans Docker)
-- VS Code + extensions (WSL, Docker, Python, YAML) : à compléter
-- MQTT Explorer : à compléter
+- VS Code 1.145.2 + extensions (WSL, Docker, Python, YAML)
+- MQTT Explorer 0.4.0-beta.6
 
 ## Comptes
 - GitHub : SidAhmedfr
