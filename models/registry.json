@@ -1,23 +1,37 @@
 {
   "edge": {
-    "mv": 0,
-    "file": "model_edge_v0.joblib",
+    "mv": 1,
+    "file": "model_edge_v1.joblib",
     "metrics": {
-      "note": "stub"
+      "seed": 42,
+      "split": "test",
+      "variant": "8 trees, depth 6",
+      "model_h": "edge/model.h",
+      "f1_incendie": 0.9797,
+      "taux_fausses_alarmes": 0.008,
+      "taille_ko": 50.8
     }
   },
   "fog": {
-    "mv": 0,
-    "file": "model_fog_v0.joblib",
+    "mv": 2,
+    "file": "model_fog_v2.joblib",
     "metrics": {
-      "note": "stub"
+      "seed": 42,
+      "retrained_on": "train + drifted labelled data (gaz +400)",
+      "f1_incendie_old_test": 0.9606,
+      "f1_incendie_drifted_unseen": 0.9675,
+      "taille_ko": 8528.8
     }
   },
   "cloud": {
-    "mv": 0,
-    "file": "model_cloud_v0.joblib",
+    "mv": 2,
+    "file": "model_cloud_v2.joblib",
     "metrics": {
-      "note": "stub"
+      "seed": 42,
+      "retrained_on": "train + drifted labelled data (gaz +400)",
+      "f1_incendie_old_test": 0.9674,
+      "f1_incendie_drifted_unseen": 0.9586,
+      "taille_ko": 3175.1
     }
   }
 }
