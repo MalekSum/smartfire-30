@@ -2,12 +2,6 @@
 
 
 
-\## Outil
-
-Claude (Anthropic), assistant conversationnel.
-
-
-
 \## Usage
 
 \- Explication des concepts (split par épisode, forêts aléatoires, métriques, compression, dérive).
