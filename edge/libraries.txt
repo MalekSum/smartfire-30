@@ -3,4 +3,4 @@
 
 DHT sensor library
 PubSubClient
-ArduinoJson
+ArduinoJson@7.4.3

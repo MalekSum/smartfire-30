@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "author": "Rabah Abdallah",
+  "author": "SmartFire-30",
   "editor": "wokwi",
   "parts": [
     { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 124.8, "left": -23.96, "attrs": {} },
@@ -9,7 +9,7 @@
       "id": "dht1",
       "top": -66.9,
       "left": -101.4,
-      "attrs": { "temperature": "43.3", "humidity": "70.5" }
+      "attrs": { "temperature": "20", "humidity": "71.5" }
     },
     {
       "type": "wokwi-led",
@@ -62,7 +62,7 @@
       "id": "ldr1",
       "top": -169.6,
       "left": -431.2,
-      "attrs": {}
+      "attrs": { "lux": "10" }
     }
   ],
   "connections": [
@@ -73,7 +73,6 @@
     [ "esp:GND.1", "dht1:GND", "black", [ "h0" ] ],
     [ "gas1:AOUT", "esp:34", "green", [ "v-134.4", "h249.45" ] ],
     [ "gas1:GND", "esp:GND.1", "black", [ "v-0.8", "h249.45" ] ],
-    [ "gas1:VCC", "esp:5V", "red", [ "h0" ] ],
     [ "r1:2", "esp:33", "green", [ "v66", "h-268.8", "v163.2" ] ],
     [ "r2:2", "esp:32", "gold", [ "v0" ] ],
     [ "r3:2", "esp:26", "red", [ "v0" ] ],
@@ -83,9 +82,10 @@
     [ "led1:C", "esp:GND.2", "black", [ "v0" ] ],
     [ "led2:C", "esp:GND.2", "black", [ "v0" ] ],
     [ "led3:C", "esp:GND.2", "black", [ "v0" ] ],
-    [ "ldr1:VCC", "esp:3V3", "red", [ "h0" ] ],
+    [ "ldr1:VCC", "esp:3V3", "red", [ "h249.6", "v307.2" ] ],
     [ "ldr1:GND", "esp:GND.1", "black", [ "h0" ] ],
-    [ "ldr1:DO", "esp:27", "green", [ "h0" ] ]
+    [ "ldr1:DO", "esp:27", "green", [ "h105.6", "v383.4" ] ],
+    [ "gas1:VCC", "esp:3V3", "red", [ "h0" ] ]
   ],
   "dependencies": {}
 }
