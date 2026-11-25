@@ -13,3 +13,8 @@
 ## Mise à jour : justification du placement
 - Usage : structure du tableau docs/justification_placement.md (fonctions, couches, alternatives S1 à S4)
 - Ce que j'ai vérifié moi-même : arguments comparés au contrat (sections 2 et 3), calcul 86 400 et 8 640 mesures par jour
+
+## Mise à jour : bascule du Fog sur le broker public de développement
+- Usage : aide au guidage pas à pas (lecture du code de fog/service/service.py, commandes de test, modification de MQTT_HOST dans le .env local)
+- Fichiers concernés : .env local (non versionné), docs/outils_sidahmed.md
+- Ce que j'ai vérifié moi-même : connexion à broker.emqx.io en anonyme puis avec l'utilisateur fog30 (mot de passe vide) par mosquitto_pub/sub ; après la bascule, une mesure publiée sur m2i2a/equipe30/edge/capteurs a donné une décision sur fog/resultats (y_fog 2, confirme true) et le compteur total de /api/stats est passé de 4 à 5 ; versions Node-RED relevées dans les logs du conteneur
