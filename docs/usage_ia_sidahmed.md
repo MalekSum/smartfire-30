@@ -9,3 +9,7 @@
 - Usage : code de cloud/main.py, fog/service/service.py, Dockerfiles et docker-compose.yml (adaptés du brief 02, avec deux ajouts : reconnexion MQTT et gestion des messages mal formés)
 - Fichiers concernés : cloud/, fog/service/, fog/Dockerfile, fog/nodered/, docker-compose.yml
 - Ce que j'ai vérifié moi-même : docker compose up sur ma machine, 4 services Up, /api/health, décision S4 reçue sur fog/resultats, ligne en base via /api/stats, versions Python et scikit-learn identiques au contrat
+
+## Mise à jour : justification du placement
+- Usage : structure du tableau docs/justification_placement.md (fonctions, couches, alternatives S1 à S4)
+- Ce que j'ai vérifié moi-même : arguments comparés au contrat (sections 2 et 3), calcul 86 400 et 8 640 mesures par jour
