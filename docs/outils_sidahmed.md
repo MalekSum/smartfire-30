@@ -14,3 +14,8 @@
 ## Comptes
 - GitHub : SidAhmedfr
 - draw.io (diagrams.net) : aucun compte requis
+
+## Versions dans le conteneur Node-RED (relevées dans les logs de démarrage)
+- Node-RED : v5.0.10
+- Node.js : v24.22.3
+- node-red-dashboard : 3.6.6
