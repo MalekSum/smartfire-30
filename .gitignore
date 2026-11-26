@@ -8,3 +8,10 @@ node_modules/
 cloud_data/
 mosquitto_data/
 fog/mosquitto/config/passwd
+# --- ajouts Khelfa (broker securise, outils de mesure) ---
+fog/mosquitto/config/certs/
+*.srl
+*.csr
+logs/
+tools/*.env
+emulator.env.example
