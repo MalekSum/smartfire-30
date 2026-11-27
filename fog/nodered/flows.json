@@ -1,0 +1,1033 @@
+[
+    {
+        "id": "f6f2187d.f17ca8",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "Dashboard SmartFire-30 (E6). Broker MQTT : voir le nœud de configuration (broker.emqx.io en développement). Topics du contrat v1.0, préfixe m2i2a/equipe30/. Appels REST vers le service Docker 'cloud' (pas localhost)."
+    },
+    {
+        "id": "dd287987cee6264a",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "broker.emqx.io",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "f9cb87d5e8806056",
+        "type": "ui_tab",
+        "name": "SmartFire-30",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "bf83666612d7ed15",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "SmartFire-30 · Détection d'incendie Edge – Fog – Cloud",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "0def17442be19546",
+        "type": "ui_group",
+        "name": "Capteurs (10 dernières minutes)",
+        "tab": "f9cb87d5e8806056",
+        "order": 2,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "b33e8ad3800c30eb",
+        "type": "ui_group",
+        "name": "Décision",
+        "tab": "f9cb87d5e8806056",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "5cbe3ae62b13b920",
+        "type": "ui_group",
+        "name": "Compteurs",
+        "tab": "f9cb87d5e8806056",
+        "order": 3,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "c1fd13dcdd3e4900",
+        "type": "ui_group",
+        "name": "États",
+        "tab": "f9cb87d5e8806056",
+        "order": 4,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "da83e79cf1be77e2",
+        "type": "ui_group",
+        "name": "Modèles",
+        "tab": "f9cb87d5e8806056",
+        "order": 7,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "0d9ffccb8f5b85f3",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-dashboard": "3.6.6"
+        }
+    },
+    {
+        "id": "sf_grp_scen",
+        "type": "ui_group",
+        "name": "Scénario",
+        "tab": "f9cb87d5e8806056",
+        "order": 5,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "sf_grp_alert",
+        "type": "ui_group",
+        "name": "Alertes",
+        "tab": "f9cb87d5e8806056",
+        "order": 6,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "027d7e38b9bf1d3d",
+        "type": "mqtt in",
+        "z": "f6f2187d.f17ca8",
+        "name": "mesures Edge",
+        "topic": "m2i2a/equipe30/edge/capteurs",
+        "qos": "0",
+        "datatype": "json",
+        "broker": "dd287987cee6264a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 1250,
+        "y": 260,
+        "wires": [
+            [
+                "fe53dedb2c78ef8e"
+            ]
+        ]
+    },
+    {
+        "id": "fe53dedb2c78ef8e",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "découpe mesure",
+        "func": "// msg.payload est déjà un objet JSON (on l'a demandé dans le nœud mqtt in)\nconst d = msg.payload;\n\n// valid = 0 veut dire qu'un capteur est hors plage ou figé (contrat, section 4).\n// On n'affiche pas ces valeurs douteuses sur les courbes.\nif (d.valid === 0) {\n    return null;\n}\n\n// Un tableau de 3 messages = un message par sortie (sortie 1, 2, 3)\nreturn [\n    { payload: d.t },\n    { payload: d.h },\n    { payload: d.gaz }\n];",
+        "outputs": 3,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1270,
+        "y": 440,
+        "wires": [
+            [
+                "896911fd17810d68"
+            ],
+            [
+                "6d509a932d38d7b6"
+            ],
+            [
+                "69b92da33e2e9d2a"
+            ]
+        ]
+    },
+    {
+        "id": "896911fd17810d68",
+        "type": "ui_chart",
+        "z": "f6f2187d.f17ca8",
+        "name": "courbe température",
+        "group": "0def17442be19546",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "Température (°C)",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "En attente de mesures…",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "120",
+        "removeOlder": "10",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#d62728",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1490,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6d509a932d38d7b6",
+        "type": "ui_chart",
+        "z": "f6f2187d.f17ca8",
+        "name": "courbe humidité",
+        "group": "0def17442be19546",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Humidité (%)",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "En attente de mesures…",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": "10",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1470,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "69b92da33e2e9d2a",
+        "type": "ui_chart",
+        "z": "f6f2187d.f17ca8",
+        "name": "courbe gaz",
+        "group": "0def17442be19546",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "Gaz (ADC)",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "En attente de mesures…",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "4095",
+        "removeOlder": "10",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#ff7f0e",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1470,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f3c3a089a25fcf8e",
+        "type": "mqtt in",
+        "z": "f6f2187d.f17ca8",
+        "name": "décisions Fog",
+        "topic": "m2i2a/equipe30/fog/resultats",
+        "qos": "1",
+        "datatype": "json",
+        "broker": "dd287987cee6264a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 1600,
+        "y": 280,
+        "wires": [
+            [
+                "5bf9f09d3637d442"
+            ]
+        ]
+    },
+    {
+        "id": "5bf9f09d3637d442",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "choix de la couleur",
+        "func": "// Entrée : message du topic fog/resultats (contrat, section 5)\nconst d = msg.payload;\n\n// Qui décide ? En S3 c'est l'Edge (le Fog relaie seulement), sinon c'est le Fog (ou le Cloud en S1, republié par le Fog).\nconst y = (d.mode === 'S3') ? d.y_edge : d.y_fog;\n\n// -1 ou absent = pas de décision (mesure invalide, Cloud coupé en S1...) : on n'affiche rien\nif (y === undefined || y < 0) { return null; }\n\n// Les 3 classes du contrat : 0 normal, 1 perturbation, 2 incendie\nconst classes = {\n    0: { label: 'NORMAL',       color: '#2e7d32' },  // vert\n    1: { label: 'PERTURBATION', color: '#ef6c00' },  // orange\n    2: { label: 'INCENDIE',     color: '#c62828' }   // rouge\n};\nif (!classes[y]) { return null; }\n\nconst nom = (v) => v === 2 ? 'incendie' : v === 1 ? 'perturbation' : v === 0 ? 'normal' : 'non calculé';\n\nmsg.label  = classes[y].label;\nmsg.color  = classes[y].color;\nmsg.mode   = d.mode;\nmsg.detail = 'Edge : ' + nom(d.y_edge) + '  ·  Fog : ' + nom(d.y_fog);\n\n// En S4 seulement, le Fog confirme ou infirme l'alarme de l'Edge (champ confirme, contrat section 2)\nmsg.note = (d.mode === 'S4' && d.y_edge === 2) ? (d.confirme ? 'Alarme confirmée par le Fog' : 'Fausse alarme évitée (Fog non confirmé)') : '';\n\n// Heure d'arrivée (ms) : formatée côté navigateur dans le template\nmsg.time = Date.now();\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1610,
+        "y": 160,
+        "wires": [
+            [
+                "d153e791d2123272"
+            ]
+        ]
+    },
+    {
+        "id": "d153e791d2123272",
+        "type": "ui_template",
+        "z": "f6f2187d.f17ca8",
+        "group": "b33e8ad3800c30eb",
+        "name": "bloc décision",
+        "order": 0,
+        "width": "6",
+        "height": "3",
+        "format": "<div ng-if=\"!msg.label\" style=\"text-align:center; padding:26px 10px; border-radius:12px; background:#9e9e9e; color:white; font-size:20px;\">\n  En attente d'une décision…\n</div>\n<div ng-if=\"msg.label\" ng-style=\"{'background-color': msg.color}\"\n     style=\"text-align:center; padding:20px 10px; border-radius:12px; color:white; box-shadow:0 2px 6px rgba(0,0,0,.25);\">\n  <div style=\"font-size:32px; font-weight:bold; letter-spacing:1px;\">{{msg.label}}</div>\n  <div style=\"font-size:15px; margin-top:6px;\">Scénario {{msg.mode}}  ·  {{msg.detail}}</div>\n  <div ng-if=\"msg.note\" style=\"font-size:14px; margin-top:4px; font-weight:bold;\">{{msg.note}}</div>\n  <div style=\"font-size:12px; margin-top:6px; opacity:.85;\">Dernière décision à {{msg.time | date:'HH:mm:ss'}}</div>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1850,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7ab771a7b14fbfb3",
+        "type": "inject",
+        "z": "f6f2187d.f17ca8",
+        "name": "toutes les 5 s",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "01",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1770,
+        "y": 360,
+        "wires": [
+            [
+                "f779a61d06f6ffbf"
+            ]
+        ]
+    },
+    {
+        "id": "f779a61d06f6ffbf",
+        "type": "http request",
+        "z": "f6f2187d.f17ca8",
+        "name": "GET /api/stats",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://cloud:8000/api/stats",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1790,
+        "y": 480,
+        "wires": [
+            [
+                "3093b0ebdacfc9fc"
+            ]
+        ]
+    },
+    {
+        "id": "3093b0ebdacfc9fc",
+        "type": "ui_template",
+        "z": "f6f2187d.f17ca8",
+        "group": "5cbe3ae62b13b920",
+        "name": "compteurs stats",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "format": "<table style=\"width:100%; font-size:18px; border-spacing:0 8px;\">\n  <tr><td>Mesures reçues</td><td style=\"text-align:right\"><b>{{msg.payload.total !== undefined ? msg.payload.total : '—'}}</b></td></tr>\n  <tr><td>Alertes incendie</td><td style=\"text-align:right\"><b>{{msg.payload.alertes !== undefined ? msg.payload.alertes : '—'}}</b></td></tr>\n  <tr><td>Fausses alarmes évitées</td><td style=\"text-align:right\"><b>{{msg.payload.fausses_alarmes_evitees !== undefined ? msg.payload.fausses_alarmes_evitees : '—'}}</b></td></tr>\n  <tr><td>Désaccords Edge/Fog</td><td style=\"text-align:right\"><b>{{msg.payload.desaccords_edge_fog !== undefined ? msg.payload.desaccords_edge_fog : '—'}}</b></td></tr>\n  <tr><td>Dernière réception</td><td style=\"text-align:right\">\n    <span ng-if=\"msg.payload.derniere_reception\">{{msg.payload.derniere_reception * 1000 | date:'HH:mm:ss'}}</span>\n    <span ng-if=\"!msg.payload.derniere_reception\">—</span></td></tr>\n</table>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 2020,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8d62bdf1a4c69d45",
+        "type": "mqtt in",
+        "z": "f6f2187d.f17ca8",
+        "name": "statuts Edge/Fog",
+        "topic": "m2i2a/equipe30/+/statut",
+        "qos": "1",
+        "datatype": "utf8",
+        "broker": "dd287987cee6264a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 2000,
+        "y": 240,
+        "wires": [
+            [
+                "e64fc8562c550ef7"
+            ]
+        ]
+    },
+    {
+        "id": "e64fc8562c550ef7",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "état des couches",
+        "func": "// topic = m2i2a/equipe30/<couche>/statut  ->  la couche est le 3e morceau\nconst layer = msg.topic.split('/')[2];\n\n// On garde l'état des deux couches en mémoire (contexte du flow)\nconst st = flow.get('layers') || { edge: 'inconnu', fog: 'inconnu' };\nst[layer] = String(msg.payload).trim();\nflow.set('layers', st);\n\nmsg.payload = st;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2080,
+        "y": 320,
+        "wires": [
+            [
+                "172dfef8edc28480"
+            ]
+        ]
+    },
+    {
+        "id": "172dfef8edc28480",
+        "type": "ui_template",
+        "z": "f6f2187d.f17ca8",
+        "group": "c1fd13dcdd3e4900",
+        "name": "état Edge/Fog",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "format": "<div style=\"font-size:18px; line-height:2.1\">\n  <div><span ng-style=\"{color: msg.payload.edge==='online' ? '#2e7d32' : (msg.payload.edge==='offline' ? '#c62828' : '#757575')}\">●</span> Edge : <b ng-style=\"{color: msg.payload.edge==='online' ? '#2e7d32' : (msg.payload.edge==='offline' ? '#c62828' : '#757575')}\">{{msg.payload.edge}}</b></div>\n  <div><span ng-style=\"{color: msg.payload.fog==='online' ? '#2e7d32' : (msg.payload.fog==='offline' ? '#c62828' : '#757575')}\">●</span> Fog : <b ng-style=\"{color: msg.payload.fog==='online' ? '#2e7d32' : (msg.payload.fog==='offline' ? '#c62828' : '#757575')}\">{{msg.payload.fog}}</b></div>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 2240,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4cc1fce40b90e81c",
+        "type": "inject",
+        "z": "f6f2187d.f17ca8",
+        "name": "toutes les 10 s",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "10",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "01",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 2210,
+        "y": 520,
+        "wires": [
+            [
+                "f9dc46682520ed83",
+                "de060d3cd16606f3"
+            ]
+        ]
+    },
+    {
+        "id": "f9dc46682520ed83",
+        "type": "http request",
+        "z": "f6f2187d.f17ca8",
+        "name": "GET /api/health",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://cloud:8000/api/health",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 2210,
+        "y": 600,
+        "wires": [
+            [
+                "0d9db813c1f4b62e"
+            ]
+        ]
+    },
+    {
+        "id": "0d9db813c1f4b62e",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "santé du Cloud",
+        "func": "msg.payload = (msg.payload && msg.payload.ok === true) ? 'en ligne' : 'hors ligne';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2200,
+        "y": 680,
+        "wires": [
+            [
+                "7bcc2f1ef08e16fa"
+            ]
+        ]
+    },
+    {
+        "id": "62471bfba545bbad",
+        "type": "catch",
+        "z": "f6f2187d.f17ca8",
+        "name": "Cloud injoignable",
+        "scope": [
+            "f9dc46682520ed83"
+        ],
+        "uncaught": false,
+        "x": 2530,
+        "y": 520,
+        "wires": [
+            [
+                "d1c388197329fc51"
+            ]
+        ]
+    },
+    {
+        "id": "d1c388197329fc51",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Cloud hors ligne",
+        "func": "msg.payload = 'hors ligne';\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2540,
+        "y": 620,
+        "wires": [
+            [
+                "7bcc2f1ef08e16fa"
+            ]
+        ]
+    },
+    {
+        "id": "7bcc2f1ef08e16fa",
+        "type": "ui_template",
+        "z": "f6f2187d.f17ca8",
+        "group": "c1fd13dcdd3e4900",
+        "name": "état Cloud",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "format": "<div style=\"font-size:18px; line-height:2.1\">\n  <span ng-style=\"{color: msg.payload==='en ligne' ? '#2e7d32' : '#c62828'}\">●</span> Cloud :\n  <b ng-style=\"{color: msg.payload==='en ligne' ? '#2e7d32' : '#c62828'}\">{{msg.payload}}</b>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 2540,
+        "y": 720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "de060d3cd16606f3",
+        "type": "http request",
+        "z": "f6f2187d.f17ca8",
+        "name": "GET /api/modele/version",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://cloud:8000/api/modele/version",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 2410,
+        "y": 440,
+        "wires": [
+            [
+                "72e04b1428560e73"
+            ]
+        ]
+    },
+    {
+        "id": "72e04b1428560e73",
+        "type": "ui_template",
+        "z": "f6f2187d.f17ca8",
+        "group": "da83e79cf1be77e2",
+        "name": "versions modèles",
+        "order": 0,
+        "width": "6",
+        "height": "3",
+        "format": "<div style=\"font-size:18px; line-height:2\">\n  Edge : <b>{{msg.payload.edge !== undefined ? 'v' + msg.payload.edge : '—'}}</b><br>\n  Fog : <b>{{msg.payload.fog !== undefined ? 'v' + msg.payload.fog : '—'}}</b><br>\n  Cloud : <b>{{msg.payload.cloud !== undefined ? 'v' + msg.payload.cloud : '—'}}</b>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 2600,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "sf_catch_cloud",
+        "type": "catch",
+        "z": "f6f2187d.f17ca8",
+        "name": "Cloud injoignable (stats, versions)",
+        "scope": [
+            "f779a61d06f6ffbf",
+            "de060d3cd16606f3"
+        ],
+        "uncaught": false,
+        "x": 2250,
+        "y": 820,
+        "wires": [
+            [
+                "sf_fn_vide"
+            ]
+        ]
+    },
+    {
+        "id": "sf_fn_vide",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "vider compteurs et versions",
+        "func": "// Le Cloud ne répond pas : on envoie un objet vide au template concerné, qui affiche '—'\n// msg.error.source.id = identifiant du nœud http request qui a échoué\nconst src = (msg.error && msg.error.source) ? msg.error.source.id : '';\nconst vide = { payload: {} };\nif (src === 'f779a61d06f6ffbf') { return [vide, null]; }   // GET /api/stats -> compteurs\nif (src === 'de060d3cd16606f3') { return [null, vide]; }   // GET /api/modele/version -> versions\nreturn null;",
+        "outputs": 2,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2500,
+        "y": 820,
+        "wires": [
+            [
+                "3093b0ebdacfc9fc"
+            ],
+            [
+                "72e04b1428560e73"
+            ]
+        ]
+    },
+    {
+        "id": "sf_mode_sel",
+        "type": "ui_dropdown",
+        "z": "f6f2187d.f17ca8",
+        "name": "choix du scénario",
+        "label": "Scénario actif",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "sf_grp_scen",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "multiple": false,
+        "options": [
+            {
+                "label": "S1 - Cloud",
+                "value": "S1",
+                "type": "str"
+            },
+            {
+                "label": "S2 - Fog",
+                "value": "S2",
+                "type": "str"
+            },
+            {
+                "label": "S3 - Edge",
+                "value": "S3",
+                "type": "str"
+            },
+            {
+                "label": "S4 - Hybride",
+                "value": "S4",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "",
+        "topicType": "str",
+        "className": "",
+        "x": 1480,
+        "y": 880,
+        "wires": [
+            [
+                "sf_mode_out"
+            ]
+        ]
+    },
+    {
+        "id": "sf_mode_out",
+        "type": "mqtt out",
+        "z": "f6f2187d.f17ca8",
+        "name": "commande mode (retained)",
+        "topic": "m2i2a/equipe30/edge/commande/mode",
+        "qos": "1",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "dd287987cee6264a",
+        "x": 1740,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "sf_mode_in",
+        "type": "mqtt in",
+        "z": "f6f2187d.f17ca8",
+        "name": "mode actuel",
+        "topic": "m2i2a/equipe30/edge/commande/mode",
+        "qos": "1",
+        "datatype": "utf8",
+        "broker": "dd287987cee6264a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 1250,
+        "y": 880,
+        "wires": [
+            [
+                "sf_mode_sel"
+            ]
+        ]
+    },
+    {
+        "id": "sf_al_in",
+        "type": "mqtt in",
+        "z": "f6f2187d.f17ca8",
+        "name": "alertes Edge",
+        "topic": "m2i2a/equipe30/edge/alerte",
+        "qos": "1",
+        "datatype": "json",
+        "broker": "dd287987cee6264a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 1250,
+        "y": 960,
+        "wires": [
+            [
+                "sf_al_fn"
+            ]
+        ]
+    },
+    {
+        "id": "sf_al_fn",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "journal des alertes",
+        "func": "// msg.payload = {\"id\",\"seq\",\"ts\",\"niveau\",\"source\"} (topic edge/alerte, contrat)\nconst a = msg.payload;\n\n// On garde les 10 dernières alertes dans le contexte du flow (mémoire de Node-RED)\nconst liste = flow.get('alertes') || [];\n\n// On stocke l'heure d'ARRIVÉE en millisecondes (Date.now()).\n// Le formatage HH:mm:ss est fait dans le template, côté navigateur (bon fuseau horaire).\nliste.unshift({ t: Date.now(), id: a.id, seq: a.seq, niveau: a.niveau, source: a.source });\n\n// On coupe à 10 éléments : la plus récente est en haut\nif (liste.length > 10) { liste.length = 10; }\n\nflow.set('alertes', liste);\nmsg.payload = liste;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1480,
+        "y": 960,
+        "wires": [
+            [
+                "sf_al_tpl"
+            ]
+        ]
+    },
+    {
+        "id": "sf_al_tpl",
+        "type": "ui_template",
+        "z": "f6f2187d.f17ca8",
+        "group": "sf_grp_alert",
+        "name": "liste des alertes",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "format": "<div style=\"font-size:15px\">\n  <div ng-if=\"!msg.payload.length\">Aucune alerte reçue</div>\n  <table style=\"width:100%; border-spacing:0 4px;\">\n    <tr ng-repeat=\"a in msg.payload\">\n      <td>{{a.t | date:'HH:mm:ss'}}</td>\n      <td>nœud {{a.id}}</td>\n      <td>seq {{a.seq}}</td>\n      <td style=\"color:#c62828\"><b>niveau {{a.niveau}} ({{a.source}})</b></td>\n    </tr>\n  </table>\n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1720,
+        "y": 960,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "sf_c1",
+        "type": "comment",
+        "z": "f6f2187d.f17ca8",
+        "name": "1. Mesures Edge → courbes (valid = 0 ignoré)",
+        "info": "",
+        "x": 1330,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "sf_c2",
+        "type": "comment",
+        "z": "f6f2187d.f17ca8",
+        "name": "2. Décisions Fog → bloc Décision",
+        "info": "",
+        "x": 1700,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "sf_c3",
+        "type": "comment",
+        "z": "f6f2187d.f17ca8",
+        "name": "3. API Cloud → compteurs et versions (toutes les 5 s / 10 s)",
+        "info": "",
+        "x": 1990,
+        "y": 330,
+        "wires": []
+    },
+    {
+        "id": "sf_c4",
+        "type": "comment",
+        "z": "f6f2187d.f17ca8",
+        "name": "4. Statuts Last Will → états Edge / Fog / Cloud",
+        "info": "",
+        "x": 2180,
+        "y": 190,
+        "wires": []
+    },
+    {
+        "id": "sf_c5",
+        "type": "comment",
+        "z": "f6f2187d.f17ca8",
+        "name": "5. Scénario (retained QoS 1) et journal des alertes",
+        "info": "",
+        "x": 1450,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "sf_c6",
+        "type": "comment",
+        "z": "f6f2187d.f17ca8",
+        "name": "6. Cloud coupé → catch → affichage '—'",
+        "info": "",
+        "x": 2400,
+        "y": 780,
+        "wires": []
+    }
+]
