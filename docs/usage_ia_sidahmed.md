@@ -23,3 +23,4 @@
 - Usage : conception des flux Node-RED du tableau de bord (fog/nodered/flows.json) à partir de mon export, avec explication des nœuds
 - Fichiers concernés : fog/nodered/flows.json, simulation/captures/
 - Ce que j'ai vérifié moi-même : flux chargé dans Node-RED, décisions normal, perturbation et incendie affichées, compteurs relevés avant et après chaque mesure (règle des fausses alarmes évitées vérifiée), Cloud coupé (affichage hors ligne et tirets), Fog coupé (offline par Last Will)
+- Dockerfile Node-RED : copie du flux dans l'image et version du dashboard figée (3.6.6) ; vérifié par un build, les logs de démarrage (dashboard 3.6.6, flux chargé depuis /data/flows.json) et un accès à /ui sur une image de test (port 1881).
