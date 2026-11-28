@@ -18,3 +18,7 @@
 - Usage : aide au guidage pas à pas (lecture du code de fog/service/service.py, commandes de test, modification de MQTT_HOST dans le .env local)
 - Fichiers concernés : .env local (non versionné), docs/outils_sidahmed.md
 - Ce que j'ai vérifié moi-même : connexion à broker.emqx.io en anonyme puis avec l'utilisateur fog30 (mot de passe vide) par mosquitto_pub/sub ; après la bascule, une mesure publiée sur m2i2a/equipe30/edge/capteurs a donné une décision sur fog/resultats (y_fog 2, confirme true) et le compteur total de /api/stats est passé de 4 à 5 ; versions Node-RED relevées dans les logs du conteneur
+
+## Mise à jour : README de cloud/ et fog/
+- Usage : rédaction de cloud/README.md et fog/README.md d'après mon code (main.py, service.py, flows.json) et le contrat
+- Ce que j'ai vérifié moi-même : variables, routes et comportements relus contre le code et contre les tests que j'ai faits
